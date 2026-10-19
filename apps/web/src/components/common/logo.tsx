@@ -26,7 +26,7 @@ export function Logo({
     <span className={cn("inline-flex items-center gap-2.5", className)} style={{ color: LOGO_BLUE }}>
       <BrandGlyph className="h-7 w-auto" aria-hidden />
       {withWordmark ? (
-        <span className="text-lg font-extrabold tracking-tight uppercase">{siteConfig.name}</span>
+        <span className="text-lg font-extrabold tracking-tight uppercase [text-box:trim-both_cap_alphabetic]">{siteConfig.name}</span>
       ) : null}
     </span>
   );

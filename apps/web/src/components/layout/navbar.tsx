@@ -22,8 +22,8 @@ export function Navbar() {
   const [activeId, setActiveId] = useState<string | null>(null);
 
   const navItems = [
-    { label: t.nav.services, href: "/#untuk-siapa" },
     { label: t.nav.niches, href: "/#niche" },
+    { label: t.nav.services, href: "/#untuk-siapa" },
     { label: t.nav.process, href: "/#process" },
     { label: t.nav.pricing, href: "/#pricing" },
     { label: t.nav.servicesPage, href: "/services" },

@@ -23,12 +23,12 @@ export default function HomePage() {
     <>
       <FaqJsonLd id="faq" items={id.faq.items} />
       <Hero />
+      <Niches />
       {SHOW_TRUSTED_BY && <TrustedBy />}
       <Services />
       <WhyUs />
       <Process />
       <Pricing />
-      <Niches />
       {SHOW_PORTFOLIO && <Portfolio />}
       {SHOW_TESTIMONIALS && <Testimonials />}
       <Faq />
