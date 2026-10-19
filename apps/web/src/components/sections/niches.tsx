@@ -144,33 +144,10 @@ export function Niches() {
         description={t.niches.description}
       />
 
-      {/* Mobile order: family chips → preview → rest. Desktop: controls left, sticky preview right. */}
-      <Reveal className="mt-12 grid gap-6 lg:mt-14 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-x-10">
-        <fieldset className="lg:col-start-1 lg:row-start-1">
-          <legend className="text-sm font-medium">{t.niches.pickLabel}</legend>
-          <div className={cn("mt-3", chipRow)}>
-            {nicheMeta.map(({ icon: Icon }, i) => (
-              <button
-                key={i}
-                type="button"
-                aria-pressed={i === fi}
-                onClick={() => pickFamily(i)}
-                className={cn(
-                  "inline-flex shrink-0 snap-start items-center gap-2 rounded-full border px-3.5 py-2 text-sm whitespace-nowrap transition-colors duration-200 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
-                  i === fi
-                    ? "border-brand bg-brand text-white shadow-[0_6px_20px_-6px_var(--brand)]"
-                    : "border-border bg-card text-muted-foreground hover:border-brand/40 hover:text-foreground",
-                )}
-              >
-                <Icon className="size-4" />
-                {t.niches.families[i].name}
-              </button>
-            ))}
-          </div>
-        </fieldset>
-
+      {/* Preview first so visitors see a site straight away; the pickers sit below it. */}
+      <Reveal className="mt-12 space-y-10 lg:mt-14">
         {/* live mock — illustrative, but clickable */}
-        <div className="lg:sticky lg:top-28 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:self-start">
+        <div className="mx-auto w-full max-w-4xl">
           <div className="mb-3 flex items-center justify-between gap-3">
             <p className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
               <MousePointerClick className="size-3.5 text-brand" />
@@ -232,67 +209,92 @@ export function Niches() {
           </CtaButton>
         </div>
 
-        <div className="space-y-7 lg:col-start-1 lg:row-start-2">
-          <fieldset>
-            <legend className="text-sm font-medium">{t.niches.nicheLabel}</legend>
-            <div className={cn("mt-3", chipRow)}>
-              {family.items.map((item, i) => (
-                <button
-                  key={item}
-                  type="button"
-                  aria-pressed={i === ni}
-                  onClick={() => setNi(i)}
-                  className={cn(
-                    "min-h-9 shrink-0 snap-start rounded-full border px-3 py-1.5 text-xs font-medium whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
-                    i === ni
-                      ? "border-brand/50 bg-brand/10 text-brand"
-                      : "border-border text-muted-foreground hover:text-foreground",
-                  )}
-                >
-                  {item}
-                </button>
-              ))}
-            </div>
-          </fieldset>
-
-          <div className="grid gap-5 sm:grid-cols-[1fr_auto]">
-            <div>
-              <label htmlFor="niche-business" className="text-sm font-medium">
-                {t.niches.nameLabel}
-              </label>
-              <input
-                id="niche-business"
-                value={business}
-                onChange={(e) => setBusiness(e.target.value)}
-                maxLength={40}
-                autoComplete="organization"
-                placeholder={t.niches.namePlaceholder}
-                className="mt-3 h-11 w-full rounded-xl border border-border bg-card px-4 text-base shadow-soft outline-none transition-colors placeholder:text-muted-foreground/70 focus:border-brand focus:ring-2 focus:ring-brand/20 sm:text-sm"
-              />
-            </div>
-            <fieldset>
-              <legend className="text-sm font-medium">{t.niches.ui.colorLabel}</legend>
-              <div className="mt-3 flex h-11 items-center gap-2.5">
-                {SWATCHES.map((c, i) => (
+        <div className="grid gap-7 lg:grid-cols-2 lg:gap-x-10">
+          <div className="min-w-0 space-y-7">
+            <fieldset className="min-w-0">
+              <legend className="text-sm font-medium">{t.niches.pickLabel}</legend>
+              <div className={cn("mt-3", chipRow)}>
+                {nicheMeta.map(({ icon: Icon }, i) => (
                   <button
                     key={i}
                     type="button"
-                    aria-pressed={i === swatch}
-                    aria-label={t.niches.ui.colors[i]}
-                    title={t.niches.ui.colors[i]}
-                    onClick={() => setSwatch(i)}
+                    aria-pressed={i === fi}
+                    onClick={() => pickFamily(i)}
                     className={cn(
-                      "size-8 rounded-full ring-offset-2 ring-offset-background transition-transform active:scale-90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand sm:size-7",
-                      i === swatch ? "ring-2 ring-foreground/70" : "ring-1 ring-border",
+                      "inline-flex shrink-0 snap-start items-center gap-2 rounded-full border px-3.5 py-2 text-sm whitespace-nowrap transition-colors duration-200 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+                      i === fi
+                        ? "border-brand bg-brand text-white shadow-[0_6px_20px_-6px_var(--brand)]"
+                        : "border-border bg-card text-muted-foreground hover:border-brand/40 hover:text-foreground",
                     )}
-                    style={{ background: c ?? "var(--brand)" }}
-                  />
+                  >
+                    <Icon className="size-4" />
+                    {t.niches.families[i].name}
+                  </button>
                 ))}
               </div>
             </fieldset>
+
+            <fieldset className="min-w-0">
+              <legend className="text-sm font-medium">{t.niches.nicheLabel}</legend>
+              <div className={cn("mt-3", chipRow)}>
+                {family.items.map((item, i) => (
+                  <button
+                    key={item}
+                    type="button"
+                    aria-pressed={i === ni}
+                    onClick={() => setNi(i)}
+                    className={cn(
+                      "min-h-9 shrink-0 snap-start rounded-full border px-3 py-1.5 text-xs font-medium whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+                      i === ni
+                        ? "border-brand/50 bg-brand/10 text-brand"
+                        : "border-border text-muted-foreground hover:text-foreground",
+                    )}
+                  >
+                    {item}
+                  </button>
+                ))}
+              </div>
+            </fieldset>
+
+            <div className="grid gap-5 sm:grid-cols-[1fr_auto]">
+              <div>
+                <label htmlFor="niche-business" className="text-sm font-medium">
+                  {t.niches.nameLabel}
+                </label>
+                <input
+                  id="niche-business"
+                  value={business}
+                  onChange={(e) => setBusiness(e.target.value)}
+                  maxLength={40}
+                  autoComplete="organization"
+                  placeholder={t.niches.namePlaceholder}
+                  className="mt-3 h-11 w-full rounded-xl border border-border bg-card px-4 text-base shadow-soft outline-none transition-colors placeholder:text-muted-foreground/70 focus:border-brand focus:ring-2 focus:ring-brand/20 sm:text-sm"
+                />
+              </div>
+              <fieldset>
+                <legend className="text-sm font-medium">{t.niches.ui.colorLabel}</legend>
+                <div className="mt-3 flex h-11 items-center gap-2.5">
+                  {SWATCHES.map((c, i) => (
+                    <button
+                      key={i}
+                      type="button"
+                      aria-pressed={i === swatch}
+                      aria-label={t.niches.ui.colors[i]}
+                      title={t.niches.ui.colors[i]}
+                      onClick={() => setSwatch(i)}
+                      className={cn(
+                        "size-8 rounded-full ring-offset-2 ring-offset-background transition-transform active:scale-90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand sm:size-7",
+                        i === swatch ? "ring-2 ring-foreground/70" : "ring-1 ring-border",
+                      )}
+                      style={{ background: c ?? "var(--brand)" }}
+                    />
+                  ))}
+                </div>
+              </fieldset>
+            </div>
           </div>
 
-          <div className="rounded-2xl border border-border bg-card p-5 shadow-soft">
+          <div className="self-start rounded-2xl border border-border bg-card p-5 shadow-soft">
             <div className="flex items-center justify-between gap-3">
               <p className="text-sm font-semibold">{t.niches.featuresLabel}</p>
               <span className="rounded-full bg-secondary px-2.5 py-1 text-xs font-medium text-muted-foreground">

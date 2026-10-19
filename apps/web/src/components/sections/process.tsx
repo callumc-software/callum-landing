@@ -39,8 +39,9 @@ export function Process() {
     setActive(Math.min(n - 1, Math.floor(v * n + 0.5) - 1));
   });
 
+  // overflow-x-clip: cards slide in from x ±28, which would otherwise widen the page on phones.
   return (
-    <Section id="process">
+    <Section id="process" className="overflow-x-clip">
       <SectionHeading
         eyebrow={t.process.eyebrow}
         title={t.process.title}
