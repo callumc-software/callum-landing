@@ -12,21 +12,17 @@ import { CtaButton } from "@/components/ui/cta-button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { cn } from "@/lib/utils";
 
 type FormValues = {
   name: string;
   email: string;
   company: string;
-  budget: string;
   message: string;
   /** Honeypot — hidden from humans, bots fill it. */
   website: string;
 };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-// Keep in sync with BUDGET_VALUES in apps/dashboard/src/lib/budget.ts.
-const budgets = ["< Rp 15 jt", "Rp 15 – 50 jt", "Rp 50 – 150 jt", "Rp 150 jt+"];
 
 export function Contact() {
   const t = useDict();
@@ -36,7 +32,7 @@ export function Contact() {
     reset,
     formState: { errors, isSubmitting },
   } = useForm<FormValues>({
-    defaultValues: { name: "", email: "", company: "", budget: "", message: "", website: "" },
+    defaultValues: { name: "", email: "", company: "", message: "", website: "" },
   });
 
   const contactDetails = [
@@ -197,30 +193,9 @@ export function Contact() {
                   </Field>
                 </div>
 
-                <div className="grid gap-5 sm:grid-cols-2">
-                  <Field label={t.contact.company} htmlFor="company" optionalLabel={t.contact.optional}>
-                    <Input id="company" placeholder={t.contact.companyPlaceholder} autoComplete="organization" {...register("company")} />
-                  </Field>
-                  <Field label={t.contact.budget} htmlFor="budget" optionalLabel={t.contact.optional}>
-                    <select
-                      id="budget"
-                      defaultValue=""
-                      {...register("budget")}
-                      className={cn(
-                        "flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm text-foreground shadow-xs outline-none transition-[color,box-shadow]",
-                        "focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50",
-                        "[&>option]:bg-popover [&>option]:text-popover-foreground",
-                      )}
-                    >
-                      <option value="">{t.contact.budgetPlaceholder}</option>
-                      {budgets.map((b) => (
-                        <option key={b} value={b}>
-                          {b}
-                        </option>
-                      ))}
-                    </select>
-                  </Field>
-                </div>
+                <Field label={t.contact.company} htmlFor="company" optionalLabel={t.contact.optional}>
+                  <Input id="company" placeholder={t.contact.companyPlaceholder} autoComplete="organization" {...register("company")} />
+                </Field>
 
                 <Field label={t.contact.message} error={errors.message?.message} htmlFor="message">
                   <Textarea

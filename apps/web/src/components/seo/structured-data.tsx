@@ -45,7 +45,6 @@ export function StructuredData() {
         "@type": "Offer",
         url: `${siteConfig.url}/jasa-pembuatan-website`,
         itemOffered: { "@type": "Service", name: "Jasa pembuatan website dan software kustom" },
-        priceSpecification: { "@type": "PriceSpecification", minPrice: 15_000_000, priceCurrency: "IDR" },
       },
     },
   ];

@@ -60,14 +60,6 @@ export function Pricing() {
                     {t.pricing.customLink}
                   </Link>
                 )}
-                {card.price && (
-                  <p className="mt-6 flex items-baseline gap-2">
-                    <span className="text-xs tracking-wide text-muted-foreground uppercase">
-                      {t.pricing.fromLabel}
-                    </span>
-                    <span className="text-2xl font-semibold tracking-tight">{card.price}</span>
-                  </p>
-                )}
                 <a
                   href={waLink(live ? t.wa.consult : `${t.wa.waitlist} ${card.title}`)}
                   data-track={live ? "wa_click" : "waitlist_click"}

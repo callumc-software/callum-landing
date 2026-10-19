@@ -169,8 +169,6 @@ export const en = {
     eyebrow: "Custom projects",
     title: "Custom website and software development",
     subtitle: "For businesses that need more than a template: a website, internal system, or app built around how you work. Scope, timeline, and cost are agreed in writing before we start.",
-    priceLabel: "From",
-    price: "IDR 15 million",
     cta: "Free consultation on WhatsApp",
     secondaryCta: "Services and tech stack",
     buildEyebrow: "What we build",
@@ -212,7 +210,7 @@ export const en = {
     ],
     costEyebrow: "Cost",
     costTitle: "How much does a custom website cost?",
-    costIntro: "Custom projects start from IDR 15 million. The final figure depends on scope, and goes into a written quote after the consultation. What moves the price most:",
+    costIntro: "The cost depends on scope. We put the figure in a written quote after a free consultation. What moves the price most:",
     costFactors: [
       "Number of pages, features, and user roles",
       "Integrations such as payments, WhatsApp, or other systems",
@@ -222,7 +220,7 @@ export const en = {
     faq: [
       {
         q: "How much does website development cost?",
-        a: "Custom projects start from IDR 15 million. The exact cost depends on scope and goes into a written quote after a free consultation.",
+        a: "The cost depends on scope and goes into a written quote after a free consultation.",
       },
       {
         q: "How long does it take?",
@@ -426,12 +424,10 @@ export const en = {
     eyebrow: "Ways to work with us",
     title: "Pick the path that fits your business",
     description: "We're taking custom projects now. Ready-made templates and care plans are coming soon.",
-    fromLabel: "From",
     cards: [
       {
         title: "Custom project",
         description: "For unique workflows: internal systems, MVPs, or marketplaces. Scope, timeline, and cost are agreed in writing before we start.",
-        price: "IDR 15 million",
         cta: "Request a quote",
       },
       {
@@ -445,7 +441,7 @@ export const en = {
         cta: "Join the waitlist",
       },
     ],
-    note: "Final pricing depends on scope. We send a written quote after the consultation; the figure above is a starting point, not a binding offer.",
+    note: "Pricing depends on scope. We send a written quote after a free consultation.",
     customLink: "Custom project details",
   },
   status: {
@@ -741,7 +737,7 @@ export const en = {
       },
       {
         q: "How long does it take and what does it cost?",
-        a: "Custom projects start from IDR 15 million. Exact cost and timeline depend on scope, and go into a written quote after the consultation.",
+        a: "Cost and timeline depend on scope, and go into a written quote after the consultation.",
       },
       {
         q: "Can I add features later?",
@@ -772,8 +768,6 @@ export const en = {
     emailPlaceholder: "jane@company.com",
     company: "Company",
     companyPlaceholder: "Acme Inc.",
-    budget: "Budget",
-    budgetPlaceholder: "Select a range",
     message: "What you need",
     messagePlaceholder: "Tell us about your business and what you'd like to build.",
     optional: "Optional",
@@ -813,7 +807,7 @@ export const en = {
       sections: [
         {
           h: "What we collect",
-          body: "When you submit the contact form we receive the details you type: your name, email, company, budget range, and message. The form also sends how you found us (campaign tags such as utm_source, and the referring site), which the site keeps in your browser for the current session. Your language preference stays in your browser and never leaves your device. We also keep anonymous visit statistics (pages viewed and buttons clicked, with a random per-visit id); they contain no name, IP address or other personal data.",
+          body: "When you submit the contact form we receive the details you type: your name, email, company, and message. The form also sends how you found us (campaign tags such as utm_source, and the referring site), which the site keeps in your browser for the current session. Your language preference stays in your browser and never leaves your device. We also keep anonymous visit statistics (pages viewed and buttons clicked, with a random per-visit id); they contain no name, IP address or other personal data.",
         },
         {
           h: "How we use it",
@@ -848,7 +842,7 @@ export const en = {
         },
         {
           h: "Quotes & proposals",
-          body: "Prices shown on this site are starting points, not binding offers. A binding scope, price, and timeline are only established in a written proposal you approve.",
+          body: "We do not publish prices on this site. A binding scope, price, and timeline are only established in a written proposal you approve.",
         },
         {
           h: "Payments",
@@ -1194,8 +1188,6 @@ export const id: Dict = {
     eyebrow: "Proyek kustom",
     title: "Jasa pembuatan website dan software kustom",
     subtitle: "Untuk bisnis yang butuh lebih dari template: website, sistem internal, atau aplikasi yang dibangun sesuai alur kerja Anda. Lingkup, jadwal, dan biaya disepakati tertulis sebelum mulai.",
-    priceLabel: "Mulai",
-    price: "Rp 15 juta",
     cta: "Konsultasi gratis via WhatsApp",
     secondaryCta: "Layanan dan teknologi",
     buildEyebrow: "Yang bisa kami buat",
@@ -1237,7 +1229,7 @@ export const id: Dict = {
     ],
     costEyebrow: "Biaya",
     costTitle: "Berapa biaya pembuatan website kustom?",
-    costIntro: "Proyek kustom mulai dari Rp 15 juta. Angka akhirnya tergantung lingkup, dan kami tuliskan di penawaran setelah konsultasi. Yang paling memengaruhi biaya:",
+    costIntro: "Biayanya tergantung lingkup. Angkanya kami tuliskan di penawaran tertulis setelah konsultasi gratis. Yang paling memengaruhi biaya:",
     costFactors: [
       "Jumlah halaman, fitur, dan peran pengguna",
       "Integrasi seperti pembayaran, WhatsApp, atau sistem lain",
@@ -1247,7 +1239,7 @@ export const id: Dict = {
     faq: [
       {
         q: "Berapa biaya jasa pembuatan website?",
-        a: "Proyek kustom mulai dari Rp 15 juta. Biaya pastinya tergantung lingkup dan kami tuliskan dalam penawaran setelah konsultasi gratis.",
+        a: "Biayanya tergantung lingkup dan kami tuliskan dalam penawaran tertulis setelah konsultasi gratis.",
       },
       {
         q: "Berapa lama proses pembuatannya?",
@@ -1451,12 +1443,10 @@ export const id: Dict = {
     eyebrow: "Cara bekerja sama",
     title: "Pilih jalur yang sesuai dengan bisnis Anda",
     description: "Saat ini kami menerima proyek kustom. Template siap pakai dan paket perawatan segera hadir.",
-    fromLabel: "Mulai",
     cards: [
       {
         title: "Proyek kustom",
         description: "Untuk alur kerja yang unik: sistem internal, MVP, atau marketplace. Lingkup, jadwal, dan biaya disepakati tertulis sebelum mulai.",
-        price: "Rp 15 juta",
         cta: "Minta penawaran",
       },
       {
@@ -1470,7 +1460,7 @@ export const id: Dict = {
         cta: "Daftar waitlist",
       },
     ],
-    note: "Harga akhir mengikuti lingkup pekerjaan. Kami kirim penawaran tertulis setelah konsultasi; angka di atas adalah titik awal, bukan penawaran yang mengikat.",
+    note: "Biaya mengikuti lingkup pekerjaan. Kami kirim penawaran tertulis setelah konsultasi gratis.",
     customLink: "Detail proyek kustom",
   },
   status: {
@@ -1766,7 +1756,7 @@ export const id: Dict = {
       },
       {
         q: "Berapa lama pengerjaannya dan berapa biayanya?",
-        a: "Proyek kustom mulai dari Rp 15 juta. Biaya dan jadwal pastinya tergantung lingkup, dan kami tuangkan dalam penawaran tertulis setelah konsultasi.",
+        a: "Biaya dan jadwalnya tergantung lingkup, dan kami tuangkan dalam penawaran tertulis setelah konsultasi.",
       },
       {
         q: "Bisa tambah fitur nanti?",
@@ -1797,8 +1787,6 @@ export const id: Dict = {
     emailPlaceholder: "nama@perusahaan.com",
     company: "Perusahaan",
     companyPlaceholder: "Nama perusahaan",
-    budget: "Anggaran",
-    budgetPlaceholder: "Pilih kisaran anggaran",
     message: "Kebutuhan Anda",
     messagePlaceholder: "Ceritakan bisnis Anda dan apa yang ingin dibuat.",
     optional: "Opsional",
@@ -1837,7 +1825,7 @@ export const id: Dict = {
       sections: [
         {
           h: "Data yang kami kumpulkan",
-          body: "Saat Anda mengisi formulir kontak, kami menerima data yang Anda masukkan, yaitu nama, email, perusahaan, kisaran anggaran, dan pesan. Formulir juga mengirimkan dari mana Anda menemukan kami (tag kampanye seperti utm_source dan situs perujuk), yang disimpan di browser Anda selama sesi berjalan. Pilihan bahasa tetap tersimpan di browser Anda dan tidak pernah dikirim ke server kami. Kami juga mencatat statistik kunjungan anonim (halaman yang dibuka dan tombol yang diklik, dengan ID kunjungan acak); data ini tidak berisi nama, alamat IP, atau data pribadi lainnya.",
+          body: "Saat Anda mengisi formulir kontak, kami menerima data yang Anda masukkan, yaitu nama, email, perusahaan, dan pesan. Formulir juga mengirimkan dari mana Anda menemukan kami (tag kampanye seperti utm_source dan situs perujuk), yang disimpan di browser Anda selama sesi berjalan. Pilihan bahasa tetap tersimpan di browser Anda dan tidak pernah dikirim ke server kami. Kami juga mencatat statistik kunjungan anonim (halaman yang dibuka dan tombol yang diklik, dengan ID kunjungan acak); data ini tidak berisi nama, alamat IP, atau data pribadi lainnya.",
         },
         {
           h: "Penggunaan data",
@@ -1872,7 +1860,7 @@ export const id: Dict = {
         },
         {
           h: "Penawaran & proposal",
-          body: "Harga yang tertera di situs ini adalah harga awal, bukan penawaran yang mengikat. Lingkup, harga, dan jadwal yang berlaku hanya yang tercantum di proposal tertulis yang telah Anda setujui.",
+          body: "Kami tidak mencantumkan harga di situs ini. Lingkup, harga, dan jadwal yang berlaku hanya yang tercantum di proposal tertulis yang telah Anda setujui.",
         },
         {
           h: "Pembayaran",

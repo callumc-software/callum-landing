@@ -10,7 +10,7 @@ export const siteConfig = {
   alternateNames: ["CallumC", "callumc", "callumc.id"],
   tagline: "Jasa Website & Software Kustom untuk Bisnis",
   description:
-    "Jasa pembuatan website dan software kustom untuk bisnis, mulai Rp 15 juta. Template siap pakai per niche segera hadir. Konsultasi gratis via WhatsApp.",
+    "Jasa pembuatan website dan software kustom untuk bisnis. Template siap pakai per niche segera hadir. Konsultasi gratis via WhatsApp.",
   // Override in production with NEXT_PUBLIC_SITE_URL
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://callumc.id",
   ogImage: "/opengraph-image",

@@ -29,10 +29,6 @@ export function CustomPage() {
           <Eyebrow>{p.eyebrow}</Eyebrow>
           <h1 className="mt-5 text-4xl font-semibold tracking-tight text-balance sm:text-5xl">{p.title}</h1>
           <p className="mt-5 text-base text-muted-foreground text-pretty sm:text-lg">{p.subtitle}</p>
-          <p className="mt-6 flex items-baseline gap-2">
-            <span className="text-xs tracking-wide text-muted-foreground uppercase">{p.priceLabel}</span>
-            <span className="text-3xl font-semibold tracking-tight">{p.price}</span>
-          </p>
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row">
             <CtaButton size="lg" href={waLink(t.wa.consult)} data-track="wa_click">
               <MessageCircle className="size-4" />

@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/site";
 
 const PATH = "/jasa-pembuatan-website";
 const description =
-  "Jasa pembuatan website dan software kustom untuk bisnis: website perusahaan, toko online, sistem internal, dan aplikasi. Mulai Rp 15 juta, konsultasi gratis.";
+  "Jasa pembuatan website dan software kustom untuk bisnis: website perusahaan, toko online, sistem internal, dan aplikasi. Konsultasi gratis via WhatsApp.";
 
 export const metadata: Metadata = {
   title: { absolute: "Jasa Pembuatan Website & Software Kustom | Callum C" },
@@ -29,10 +29,6 @@ export default function CustomProjectPage() {
           url: `${siteConfig.url}${PATH}`,
           areaServed: "Indonesia",
           provider: { "@id": `${siteConfig.url}/#organization` },
-          offers: {
-            "@type": "Offer",
-            priceSpecification: { "@type": "PriceSpecification", minPrice: 15_000_000, priceCurrency: "IDR" },
-          },
         }}
       />
       <CustomPage />
