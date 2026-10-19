@@ -2,34 +2,16 @@ import type { SVGProps } from "react";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/lib/site";
 
-/** "CC" monogram — two nested C's. Shared by the navbar logo, favicon and OG image. */
-export function CCGlyph(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2.4"
-      strokeLinecap="round"
-      {...props}
-    >
-      <path d="M17.66 6.34A8 8 0 1 0 17.66 17.66" />
-      <path d="M14.47 9.53A3.5 3.5 0 1 0 14.47 14.47" />
-    </svg>
-  );
-}
+/** Logo blue from the brand guide. */
+export const LOGO_BLUE = "#4285ff";
 
-export function LogoMark({ className }: { className?: string }) {
+/** Brand mark: two interlocking rounded blocks (public/logo.svg). Shared by the navbar logo, favicon and OG image. */
+export function BrandGlyph(props: SVGProps<SVGSVGElement>) {
   return (
-    <span
-      className={cn(
-        "relative grid size-8 place-items-center rounded-[0.55rem] bg-gradient-to-br from-brand-3 via-brand to-brand-2 shadow-[0_4px_16px_-4px_var(--brand)]",
-        className,
-      )}
-      aria-hidden
-    >
-      <CCGlyph className="size-5 text-white" />
-    </span>
+    <svg viewBox="12 12 270 240" fill="currentColor" {...props}>
+      <path d="M68,12h112c8,0,12,4,12,12v52c0,8-4,12-12,12h-78v80c0,8-4,12-12,12h-54c-16,0-24-8-24-24v-88c0-37.33,18.67-56,56-56Z" />
+      <path d="M204,86h54c16,0,24,8,24,24v84c0,38.67-18.67,58-56,58h-114c-8,0-12-4-12-12v-50c0-8,4-12,12-12h78v-80c0-8,4.67-12,14-12Z" />
+    </svg>
   );
 }
 
@@ -41,10 +23,10 @@ export function Logo({
   withWordmark?: boolean;
 }) {
   return (
-    <span className={cn("inline-flex items-center gap-2.5", className)}>
-      <LogoMark />
+    <span className={cn("inline-flex items-center gap-2.5", className)} style={{ color: LOGO_BLUE }}>
+      <BrandGlyph className="h-7 w-auto" aria-hidden />
       {withWordmark ? (
-        <span className="text-lg font-semibold tracking-tight">{siteConfig.name}</span>
+        <span className="text-lg font-extrabold tracking-tight uppercase">{siteConfig.name}</span>
       ) : null}
     </span>
   );

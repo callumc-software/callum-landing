@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { CCGlyph } from "@/components/common/logo";
+import { BrandGlyph, LOGO_BLUE } from "@/components/common/logo";
 
 export const size = { width: 512, height: 512 };
 export const contentType = "image/png";
@@ -15,10 +15,10 @@ export default function Icon() {
           alignItems: "center",
           justifyContent: "center",
           borderRadius: 112,
-          background: "linear-gradient(135deg, #5b9dff 0%, #2f6bff 50%, #1e50e6 100%)",
+          background: LOGO_BLUE,
         }}
       >
-        <CCGlyph width={320} height={320} stroke="white" />
+        <BrandGlyph width={320} height={284} fill="white" />
       </div>
     ),
     { ...size },

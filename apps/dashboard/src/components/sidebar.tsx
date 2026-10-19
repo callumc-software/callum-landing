@@ -35,7 +35,7 @@ export function Sidebar() {
         href="/"
         className="mb-4 flex items-center gap-2.5 self-center px-1 lg:self-start lg:px-2"
       >
-        <span className="grid size-9 place-items-center rounded-xl bg-gradient-to-br from-brand-3 via-brand to-brand-2 text-white">
+        <span className="grid size-9 place-items-center rounded-xl bg-[#4285ff] text-white">
           <CCGlyph className="size-5" />
         </span>
         <span className="hidden text-sm font-semibold lg:block">Callum C HQ</span>

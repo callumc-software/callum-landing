@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 import { siteConfig } from "@/lib/site";
-import { CCGlyph } from "@/components/common/logo";
+import { BrandGlyph, LOGO_BLUE } from "@/components/common/logo";
 
 export const alt = `${siteConfig.name} — ${siteConfig.tagline}`;
 export const size = { width: 1200, height: 630 };
@@ -33,12 +33,12 @@ export default function OpengraphImage() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              background: "linear-gradient(135deg, #5b9dff, #2f6bff 50%, #1e50e6)",
+              background: LOGO_BLUE,
             }}
           >
-            <CCGlyph width={46} height={46} stroke="white" />
+            <BrandGlyph width={46} height={41} fill="white" />
           </div>
-          <div style={{ fontSize: 40, fontWeight: 700 }}>{siteConfig.name}</div>
+          <div style={{ fontSize: 40, fontWeight: 800, textTransform: "uppercase" }}>{siteConfig.name}</div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>

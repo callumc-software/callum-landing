@@ -1,14 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 294 270">
+  <!-- Generator: Adobe Illustrator 29.8.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 2)  -->
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#5b9dff"/>
-      <stop offset=".5" stop-color="#2f6bff"/>
-      <stop offset="1" stop-color="#1e50e6"/>
-    </linearGradient>
+    <style>
+      .st0 {
+        fill: #4285ff;
+      }
+    </style>
   </defs>
-  <rect width="64" height="64" rx="14" fill="url(#g)"/>
-  <g transform="translate(12 12) scale(1.6667)" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round">
-    <path d="M17.66 6.34A8 8 0 1 0 17.66 17.66"/>
-    <path d="M14.47 9.53A3.5 3.5 0 1 0 14.47 14.47"/>
-  </g>
+  <path class="st0" d="M68,12h112c8,0,12,4,12,12v52c0,8-4,12-12,12h-78v80c0,8-4,12-12,12h-54c-16,0-24-8-24-24v-88c0-37.33,18.67-56,56-56Z"/>
+  <path class="st0" d="M204,86h54c16,0,24,8,24,24v84c0,38.67-18.67,58-56,58h-114c-8,0-12-4-12-12v-50c0-8,4-12,12-12h78v-80c0-8,4.67-12,14-12Z"/>
 </svg>

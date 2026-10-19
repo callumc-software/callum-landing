@@ -25,8 +25,8 @@ export default function LoginPage() {
         className="w-full max-w-sm"
       >
         <div className="mb-8 flex flex-col items-center gap-3 text-center">
-          <span className="grid size-12 place-items-center rounded-2xl bg-gradient-to-br from-brand-3 via-brand to-brand-2 text-white shadow-elevated">
-            <CCGlyph className="size-7" />
+          <span className="grid size-12 place-items-center rounded-2xl bg-[#4285ff] text-white shadow-elevated">
+            <CCGlyph className="size-6" />
           </span>
           <div>
             <h1 className="text-xl font-semibold">Callum C HQ</h1>
